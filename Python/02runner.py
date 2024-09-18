@@ -9,7 +9,7 @@ for i in range(len(callings)):
     players[idx-1], players[idx] = players[idx], players[idx-1]
     #print(players)
 
-def solution(players, callings):
+def solution2(players, callings):
     for c in callings: #O(N)
         idx = players.index(c) # 
         players[idx-1], players[idx] = players[idx], players[idx-1]
@@ -18,29 +18,27 @@ def solution(players, callings):
     # O(N^2)
 
 players = ["mumu", "soe", "poe", "kai", "mine"]
-player_dict = {}
-for i in range(len(players)):
-    player_dict[players[i]] = i 
-print(player_dict)
+callings = ["kai", "kai", "mine", "mine"]	
 
-idx_dict = {}
-for i in range(len(players)):
-    idx_dict[i] = players[i]
-print(idx_dict)
+def solution(players, callings):
+    player_dict = {}
+    for i in range(len(players)):
+        player_dict[players[i]] = i # 선수 이름을 key, 등수를 value로 하는 딕셔너리 생성  
 
-for c in callings:
-    cur_player = c #현재 선수의 이름
-    cur_idx = player_dict[c] #현재 선수의 등수
+    for c in callings:
+        idx = player_dict[c] #호명당한 선수의 등수
 
-    # 앞의 선수의 정보 가져오기 
-    front_idx = cur_idx - 1 #앞 선수의 등수
-    front_player = idx_dict[front_idx] #앞 선수의 이름
+        if(idx>0):
+            # 앞의 선수의 이름 알아내기
+            front_player = players[idx-1]
+            # 앞선수와 호명당한 선수 바꿔치기 
+            players[idx-1], players[idx] = players[idx], players[idx-1]
 
-    # 두 선수의 정보를 바꿔치기 
-    player_dict[cur_player], player_dict[front_player] = front_idx, cur_idx # 등수 정보 바꿔치기
-    idx_dict[cur_idx], idx_dict[front_idx] = front_player, cur_player # 선수명 정보 바꿔치기 
+            # 등수 업데이트 
+            player_dict[c] = idx-1
+            player_dict[front_player] = idx
+    return players
 
-print(idx_dict)
 
 
     
