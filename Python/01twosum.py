@@ -18,7 +18,8 @@ def twoSum(nums, target):
     for i, num in enumerate(nums):
         res = target - num 
         if res in nums[i+1::]: # list 의 검색 시간복잡도 : O(N) : 리스트를 하나하나 순회하기때문
-            return [i, i+nums[i+1::].index(res)+1] # O(1)
+            return [i, i+nums[i+1::].index(res)+1] # O(N)
+# O(n)×(O(n)+O(n))=O(n^2)
 
 # 개선 
 def twoSum3(nums, target):
