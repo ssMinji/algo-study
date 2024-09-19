@@ -28,15 +28,14 @@ def solution(players, callings):
     for c in callings:
         idx = player_dict[c] #호명당한 선수의 등수
 
-        if(idx>0):
-            # 앞의 선수의 이름 알아내기
-            front_player = players[idx-1]
-            # 앞선수와 호명당한 선수 바꿔치기 
-            players[idx-1], players[idx] = players[idx], players[idx-1]
+        # 앞의 선수의 이름 알아내기
+        front_player = players[idx-1]
+        # 앞선수와 호명당한 선수 바꿔치기 
+        players[idx-1], players[idx] = players[idx], players[idx-1]
 
-            # 등수 업데이트 
-            player_dict[c] = idx-1
-            player_dict[front_player] = idx
+        # 등수 업데이트 
+        player_dict[c] = idx-1
+        player_dict[front_player] = idx
     return players
 
 

@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# hidx (https://school.programmers.co.kr/learn/courses/30/lessons/42747)
 def binary_search(array, value):
     lower_bound = 0
     upper_bound = len(array) - 1

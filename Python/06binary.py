@@ -25,3 +25,4 @@ def binary_search(array, value):
 array = [3,17,75,80,202]
 value = 22
 print(binary_search(array, value))
+print(3//2)

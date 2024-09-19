@@ -1,3 +1,4 @@
+# 다리를 지나는 트럭(https://school.programmers.co.kr/learn/courses/30/lessons/42583) 
 def solution(bridge_length, weight, truck_weights):
     # 1. 마지막 트럭을 제외한 모든 트럭이 다리를 통과하는데 걸리는 시간 
     time = 0 
