@@ -1,5 +1,5 @@
 import java.util.Arrays;
-
+//  hidx (https://school.programmers.co.kr/learn/courses/30/lessons/42747)
 public class Hidx {
     public int binarySearch(int[] array, int value) {
         int lower_bound = 0;
