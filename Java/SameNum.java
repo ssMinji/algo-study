@@ -1,5 +1,5 @@
 import java.util.HashMap;
-
+// 가장 가까운 같은 글자(https://school.programmers.co.kr/learn/courses/30/lessons/142086) 
 public class SameNum {
     public int[] solution(String s) {
         int[] answer = new int[s.length()];
