@@ -1,6 +1,6 @@
 import java.util.Queue;
 import java.util.LinkedList;
-
+//다리를 지나는 트럭(https://school.programmers.co.kr/learn/courses/30/lessons/42583) 
 class Truck {
     public int solution(int bridge_length, int weight, int[] truck_weights) {
         // 1. 마지막 트럭을 제외한 모든 트럭이 다리를 통과하는 데 걸린 시간.
