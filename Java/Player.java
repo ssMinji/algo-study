@@ -1,6 +1,6 @@
 import java.util.Arrays;
 import java.util.HashMap;
-
+// https://school.programmers.co.kr/learn/courses/30/lessons/178871
 public class Player {
     public String[] solution2(String[] players, String[] callings) {
         for (String calling: callings){
